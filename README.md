@@ -118,8 +118,8 @@ No auth required. Returns app and CoinGecko status.
 
 | Query Param | Type | Default | Description |
 |---|---|---|---|
-| `page` | int | 1 | Page number |
-| `per_page` | int | 50 | Results per page (max 250) |
+| `page_num` | int | 1 | Page number |
+| `per_page` | int | 10 | Results per page (max 250) |
 
 ---
 
@@ -128,8 +128,8 @@ No auth required. Returns app and CoinGecko status.
 
 | Query Param | Type | Default | Description |
 |---|---|---|---|
-| `page` | int | 1 | Page number |
-| `per_page` | int | 50 | Results per page |
+| `page_num` | int | 1 | Page number |
+| `per_page` | int | 10 | Results per page (max 250) |
 
 ---
 
@@ -140,8 +140,8 @@ No auth required. Returns app and CoinGecko status.
 |---|---|---|---|
 | `coin_id` | str | None | Filter by coin (e.g. `bitcoin`) |
 | `category` | str | None | Filter by category |
-| `page` | int | 1 | Page number |
-| `per_page` | int | 50 | Results per page |
+| `page_num` | int | 1 | Page number |
+| `per_page` | int | 10 | Results per page (max 250) |
 
 ---
 
@@ -184,9 +184,8 @@ On every cache miss, a POST request is fired to your `WEBHOOK_URL` with payload:
 
 ```json
 {
-  "endpoint": "/markets",
-  "cache_hit": false,
-  "params": { "page": 1, "per_page": 50 }
+  "event": "market_data_fetched",
+  "data": { "coin_id": "bitcoin", "category": null, "page": 1, "per_page": 10 }
 }
 ```
 
