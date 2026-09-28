@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 from app.config import APP_VERSION
-from app.exceptions import AppException, app_exception_handler, global_exception_handler
+from app.exceptions import (
+    AppException,
+    app_exception_handler,
+    global_exception_handler,
+)
 from app.routes import health, coins, categories, markets
 
 app = FastAPI(
