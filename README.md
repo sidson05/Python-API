@@ -53,8 +53,8 @@ vetty-crypto-api/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/vetty-crypto-api.git
-cd vetty-crypto-api
+git clone https://github.com/sidson05/Python-API.git
+cd Python-API
 ```
 
 ### 2. Create virtual environment
